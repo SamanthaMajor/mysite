@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en" class="bg-orange-50">
+  <head>
+    <title>{{ title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/assets/main.css" />
+
+
+  </head>
+  <body class="bg-orange-50">
+    {% include "../components/navigation.njk" %}
+    <main class="p-12 ">
+      <h1 class="text-3xl mb-8">{{title}}</h1>
+      {{ content | safe }}
+    </main>
+    <script src="/assets/main.js"></script>
+    </body>
+<div class="absolute inset-x-0 bottom-0 h-16">
+<footer class="footer footer-center p-10 bg-rose-200 text-base-content rounded ">
+  <nav class="grid grid-flow-col gap-4">
+    <a class="link link-hover" href="/pages/about">About</a> 
+    <a class="link link-hover" href="/pages/projects">Projects</a>
+    <a class="link link-hover" href="/pages/contact">Contact</a>
+  </nav> 
+  <aside>
+    <p>Copyright © 2024 - All right reserved by Samantha Major</p>
+  </aside>
+</footer>
+</div>
+</html>
