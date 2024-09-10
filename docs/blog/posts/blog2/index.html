@@ -1,0 +1,93 @@
+<h1>Title: Getting Started with CSS in 11ty: A Beginner's Guide</h1>
+<h2>Introduction:</h2>
+<p>CSS (Cascading Style Sheets) plays a crucial role in styling web pages, ensuring they look visually appealing and engaging. When using 11ty (Eleventy) to build your website, understanding how to integrate and manage CSS is fundamental. In this guide, we'll walk you through the basics of CSS in 11ty, covering how to include external stylesheets, inline styles, and how to leverage TailwindCSS for rapid styling.</p>
+<h2>Purpose:</h2>
+<p>The purpose of this guide is to provide clear and detailed instructions on how to work with CSS in 11ty, catering to beginners who may be new to web development or transitioning from other platforms. By following these instructions, users will gain a solid understanding of how to effectively manage CSS within their 11ty projects, enabling them to customize the appearance of their websites with ease.</p>
+<h2>Instructions:</h2>
+<ol>
+<li>External Stylesheets:</li>
+</ol>
+<ul>
+<li>Create a new CSS file in your project directory, e.g., styles.css.
+Define your CSS styles within this file, such as:</li>
+</ul>
+<pre><code class="language-css">body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Add more styles as needed */
+
+</code></pre>
+<ul>
+<li>To include this stylesheet in your 11ty project, you can reference it in the HTML layout file (usually _includes/layouts/base.njk):</li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;&lt;/title&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;/path/to/styles.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<ul>
+<li>Replace /path/to/styles.css with the correct path to your CSS file.</li>
+</ul>
+<ol start="2">
+<li>Inline Styles:</li>
+</ol>
+<ul>
+<li>Alternatively, you can apply styles directly within your HTML templates using inline styles. For example:</li>
+</ul>
+<pre><code class="language-html">&lt;div style=&quot;background-color: #ffffff; padding: 20px;&quot;&gt;
+  &lt;h1 style=&quot;color: #333333;&quot;&gt;Welcome to My Website&lt;/h1&gt;
+  &lt;p style=&quot;font-size: 16px;&quot;&gt;This is a paragraph with inline styles.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<ul>
+<li>Inline styles are useful for applying unique styles to specific elements without creating separate CSS files.</li>
+</ul>
+<ol start="3">
+<li>Using TailwindCSS:</li>
+</ol>
+<ul>
+<li>
+<p>TailwindCSS is a utility-first CSS framework that provides pre-designed styles you can apply directly to your HTML elements.</p>
+</li>
+<li>
+<p>Install TailwindCSS in your project using npm or yarn:</p>
+</li>
+</ul>
+<pre><code>npm install tailwindcss
+</code></pre>
+<p>or</p>
+<pre><code>yarn add tailwindcss
+</code></pre>
+<ul>
+<li>Create a TailwindCSS configuration file by running:</li>
+</ul>
+<pre><code class="language-css">/* styles.css */
+@import &quot;tailwindcss/base&quot;;
+@import &quot;tailwindcss/components&quot;;
+@import &quot;tailwindcss/utilities&quot;;
+</code></pre>
+<ul>
+<li>Now you can use TailwindCSS classes directly in your HTML templates:</li>
+</ul>
+<pre><code class="language-html">&lt;div class=&quot;bg-white p-4&quot;&gt;
+  &lt;h1 class=&quot;text-black&quot;&gt;Welcome to My Website&lt;/h1&gt;
+  &lt;p class=&quot;text-lg&quot;&gt;This is a paragraph styled with TailwindCSS.&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<h2>Discussion:</h2>
+<p>Understanding how to work with CSS in 11ty is essential for customizing the appearance and layout of your website. By following the instructions outlined in this guide, you'll be equipped with the knowledge to include external stylesheets, apply inline styles, and leverage the power of TailwindCSS for efficient styling. Whether you prefer traditional CSS or a utility-first approach like TailwindCSS, mastering CSS in 11ty opens up endless possibilities for designing visually stunning websites.</p>
