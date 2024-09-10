@@ -39,8 +39,7 @@ body {
   <link rel="stylesheet" href="/path/to/styles.css">
 </head>
 <body>
-  {% block content %}
-  {% endblock %}
+
 </body>
 </html>
 ```
